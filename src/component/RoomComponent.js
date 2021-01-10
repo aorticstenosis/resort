@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import defaultImg from "../images/room-1.jpeg";
 import propTypes from "prop-types";
+
 export default function RoomComponent({ room }) {
   let { name, slug, images, price } = room;
-  console.log(room);
+
   return (
     <article className="room">
       <div className="img-container">
