@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import defaultBcg from "../images/room-1.jpeg";
-import Hero from "../component/Hero";
+// import Hero from "../component/Hero";
 import Banner from "../component/Banner";
 import { Link } from "react-router-dom";
 import { RoomContext } from "../Context";
-import RoomComponent from "../component/RoomComponent";
+// import RoomComponent from "../component/RoomComponent";
 import StyledHero from "../component/StyledHero";
 
 export default class SingleRoom extends Component {
@@ -45,10 +45,10 @@ export default class SingleRoom extends Component {
     } = room;
     const [mainImg, ...defaultImg] = images;
     const sizeInImp = Math.floor(size / 10.764);
-    console.log(defaultImg);
+
     return (
       <>
-        <StyledHero img={images[0] || this.state.defaultBcg}>
+        <StyledHero img={mainImg || this.state.defaultBcg}>
           <Banner title={`${name} room`}>
             <Link to="/rooms" className="btn-primary">
               Back to rooms
